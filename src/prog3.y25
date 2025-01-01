@@ -1,0 +1,45 @@
+{Prog2}
+PROGRAM prog2; 
+VAR LONGINT Aaaaa,Aaaa2,Bbbbb,Xxxxx,Cccc1,Cccc2;
+BEGIN
+GET Aaaaa;
+GET Bbbbb;
+FOR Aaaa2<==Aaaaa TO Bbbbb DO
+	PUT Aaaa2 MUL Aaaa2;
+
+FOR Aaaa2<==Bbbbb TO Aaaaa DO
+	PUT Aaaa2 MUL Aaaa2;
+
+Xxxxx<==0;
+Cccc1<==0;
+WHILE Cccc1 <= Aaaaa 
+BEGIN
+	Cccc2<==0;
+	WHILE Cccc2 <= Bbbbb
+	BEGIN	
+		Xxxxx<==Xxxxx ADD 1;
+		Cccc2<==Cccc2 ADD 1;
+	END
+	END WHILE
+Cccc1<==Cccc1 ADD 1;
+END	
+END WHILE
+PUT Xxxxx;
+
+Xxxxx<==0;
+Cccc1<==1;
+REPEAT
+BEGIN
+  Cccc2<==1;
+  REPEAT
+  BEGIN
+    Xxxxx<==Xxxxx ADD 1;
+    Cccc2<==Cccc2 ADD 1;
+	END
+  UNTIL NOT(Cccc2 >= Bbbbb)
+  Cccc1<==Cccc1 ADD 1;
+ END
+UNTIL NOT(Cccc1 >= Aaaaa)
+PUT Xxxxx;
+
+END

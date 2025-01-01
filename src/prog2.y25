@@ -1,0 +1,57 @@
+{Prog2}
+PROGRAM prog2; 
+VAR LONGINT Aaaaa,Bbbbb,Ccccc;
+BEGIN
+GET Aaaaa;
+GET Bbbbb;
+GET Ccccc;
+IF(Aaaaa >= Bbbbb)
+BEGIN
+	IF(Aaaaa >= Ccccc)
+	BEGIN
+		GOTO Abigger;		
+	END
+	ELSE
+	BEGIN
+		PUT Ccccc;
+		GOTO OutofIF;
+		Abigger:		
+		PUT Aaaaa;
+		GOTO OutofIF;
+	END
+END	
+IF(Bbbbb <= Ccccc)
+BEGIN
+	PUT Ccccc;
+END	
+ELSE
+BEGIN
+	PUT Bbbbb;
+END
+OutofIF:	
+
+IF((Aaaaa == Bbbbb) AND (Aaaaa == Ccccc) AND (Bbbbb == Ccccc))
+BEGIN
+	PUT 1;
+END	
+ELSE
+BEGIN
+	PUT 0;
+END
+IF((Aaaaa <= 0) OR (Bbbbb <= 0) OR (Ccccc <= 0))
+BEGIN
+	PUT -1;
+END	
+ELSE
+BEGIN
+	PUT 0;
+END
+IF(NOT(Aaaaa <= (Bbbbb ADD Ccccc)))
+BEGIN
+	PUT(10);
+END	
+ELSE
+BEGIN
+	PUT(0);
+END
+END

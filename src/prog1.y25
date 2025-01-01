@@ -1,0 +1,17 @@
+{Prog1}
+PROGRAM prog1; 
+VAR LONGINT Aaaaa,Bbbbb,Xxxxx,Yyyyy;
+BEGIN
+GET Aaaaa;
+GET Bbbbb;
+PUT Aaaaa ADD Bbbbb;
+PUT Aaaaa SUB Bbbbb;
+PUT Aaaaa MUL Bbbbb;
+PUT Aaaaa DIV Bbbbb;
+PUT Aaaaa MOD Bbbbb;
+
+Xxxxx<==(Aaaaa SUB Bbbbb) MUL 10 ADD (Aaaaa ADD Bbbbb) DIV 10;
+Yyyyy<==Xxxxx ADD (Xxxxx MOD 10);
+PUT Xxxxx;
+PUT Yyyyy;
+END
